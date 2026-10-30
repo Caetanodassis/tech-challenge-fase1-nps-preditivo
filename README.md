@@ -329,12 +329,17 @@ tech-challenge-fase1-nps-preditivo/
 │   └── desafio_nps_fase_1.csv
 ├── notebooks/
 │   └── 01_eda_negocio.ipynb
+├── apresentacao/
+│   ├── Estratégia Proativa de NPS.pptx
+│   ├── Estratégia Proativa de NPS.pdf
+│   └── video/
+│       └── README.md
 ├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
 
-As pastas e arquivos de modelagem (`data/processed/`, `src/`, `models/`, `reports/` e `notebooks/02_modelo_preditivo.ipynb`) permanecem como próximos entregáveis e não foram criados como arquivos vazios.
+Os arquivos da apresentação estão em `apresentacao/`. A subpasta `apresentacao/video/` está preparada para receber o vídeo final. As pastas e arquivos de modelagem (`data/processed/`, `src/`, `models/`, `reports/` e `notebooks/02_modelo_preditivo.ipynb`) permanecem como próximos entregáveis e não foram criados como arquivos vazios.
 
 ---
 
@@ -391,7 +396,7 @@ Também é possível abrir o notebook com `jupyter notebook` e executar célula 
 | Base de dados e notebook de EDA organizados | Concluído |
 | README com respostas aos Requisitos 1 a 3 | Concluído |
 | Notebook de modelagem e artefatos reproduzíveis do Requisito 4 | Pendente |
-| Slides executivos (PDF em `reports/`) | Pendente |
+| Apresentação executiva (PPTX e PDF em `apresentacao/`) | Concluído |
 | Vídeo executivo (até 5 minutos) | Pendente |
 
 ---
