@@ -4,7 +4,7 @@
 
 Neste projeto, olhamos para os dados da jornada de compra para entender o que aparece junto com uma experiência melhor ou pior. A análise segue as etapas da metodologia CRISP-DM que fazem sentido para esta entrega.
 
-> **Sobre esta entrega:** aqui você encontra a base, o notebook de EDA e os materiais executivos. Como a modelagem é opcional no desafio, o foco ficou na análise exploratória; não há modelo treinado nem métricas preditivas para reproduzir.
+> **Sobre esta entrega:** aqui você encontra a base, o notebook oficial da EDA ([`notebooks/01_eda_negocio.ipynb`](notebooks/01_eda_negocio.ipynb)) e os materiais executivos. Como a modelagem é opcional no desafio, o foco ficou na análise exploratória; não há modelo treinado nem métricas preditivas para reproduzir.
 
 ---
 
@@ -176,7 +176,7 @@ O NPS líquido da base (% promotores − % detratores) é de **−66 pontos**. A
 | Fase | Situação nesta entrega | Evidência |
 |---|---|---|
 | 1. Entendimento do Negócio | Realizado | Problema, públicos e perguntas de negócio nas seções 1 e 3. |
-| 2. Entendimento dos Dados | Realizado | Auditoria, distribuição, associações e limitações em `notebooks/01_eda_negocio.ipynb`. |
+| 2. Entendimento dos Dados | Realizado | Auditoria, distribuição, associações e limitações no notebook oficial [`notebooks/01_eda_negocio.ipynb`](notebooks/01_eda_negocio.ipynb). |
 | 3. Preparação dos Dados | Parcial, restrita à EDA | Criação de categorias analíticas e faixas para visualização; não há pipeline de modelagem. |
 | 4. Modelagem | Não implementada | Etapa opcional no enunciado; ver proposta na seção 8. |
 | 5. Avaliação | Não implementada | Não há resultados de validação de modelo nesta entrega. |
@@ -234,6 +234,8 @@ tech-challenge-fase1-nps-preditivo/
 │   └── desafio_nps_fase_1.csv
 ├── notebooks/
 │   └── 01_eda_negocio.ipynb
+├── reports/
+│   └── figures/               # Gráficos de apoio à apresentação
 ├── apresentacao/
 │   ├── Estratégia Proativa de NPS.pptx
 │   ├── Estratégia Proativa de NPS.pdf
@@ -244,7 +246,7 @@ tech-challenge-fase1-nps-preditivo/
 └── README.md
 ```
 
-Os arquivos da apresentação estão em `apresentacao/`. A subpasta `apresentacao/video/` está preparada para receber o vídeo final. As pastas e arquivos de modelagem (`data/processed/`, `src/`, `models/`, `reports/` e `notebooks/02_modelo_preditivo.ipynb`) permanecem como próximos entregáveis e não foram criados como arquivos vazios.
+`notebooks/01_eda_negocio.ipynb` é a fonte oficial da EDA. A pasta `reports/figures/` reúne gráficos de apoio à apresentação. Os arquivos da apresentação estão em `apresentacao/`, e a subpasta `apresentacao/video/` está preparada para receber o vídeo final. As pastas e arquivos de modelagem (`data/processed/`, `src/`, `models/` e `notebooks/02_modelo_preditivo.ipynb`) permanecem como próximos entregáveis e não foram criados como arquivos vazios.
 
 ---
 
@@ -264,12 +266,11 @@ source .venv/bin/activate          # Windows: .venv\Scripts\activate
 # 3. Instalar as dependências
 pip install -r requirements.txt
 
-# 4. Executar a EDA a partir da pasta notebooks/
-cd notebooks
-jupyter nbconvert --to notebook --execute --inplace 01_eda_negocio.ipynb
+# 4. Executar o notebook oficial da EDA a partir da raiz do projeto
+jupyter nbconvert --to notebook --execute --inplace notebooks/01_eda_negocio.ipynb
 ```
 
-Também é possível abrir o notebook com `jupyter notebook` e executar célula a célula. Execute-o com a pasta `notebooks/` como diretório de trabalho; o CSV é carregado de `../data/desafio_nps_fase_1.csv`. Todas as análises descritas neste README estão no notebook de EDA; não há modelagem ou inferência a reproduzir.
+Também é possível abrir `notebooks/01_eda_negocio.ipynb` no Jupyter ou VS Code e executar as células. O notebook localiza a raiz do projeto a partir do diretório de trabalho, lê o CSV em `data/` e salva os gráficos em `reports/figures/`. Todas as análises descritas neste README estão no notebook oficial; não há modelagem ou inferência a reproduzir.
 
 ---
 
